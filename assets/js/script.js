@@ -111,6 +111,8 @@ function component(width, height, color, x, y, type) {
 				crash = false;
 		}
 		return crash;
+		
+		// alert("Game Over!");
 	}
 }
 
@@ -119,7 +121,7 @@ function updateGameArea(){
 	for (i=0;i<myObstacles.length; i += 1){
 	if (myGamePiece.crashWith(myObstacles[i])) {
 		myGameArea.stop();
-		return
+		alert("Game Over!");
 		} 
 	}
 	myGameArea.clear();
